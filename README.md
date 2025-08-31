@@ -58,6 +58,21 @@ RAG + ReAct Agent:
 2. ReAct agent → memastikan jawaban grounded ke tool & data.
 3. Menyertakan saran dari knowledge base → meminimalisir halusinasi pada hasil analyzer CV ATS.
 
+ReAct Agent Reasoning Flow
+sequenceDiagram
+
+    participant U as 👤 User
+    participant A as 🤖 ReAct Agent
+    participant T as 🛠️ Tool
+    participant L as 🧠 LLM (Gemini)
+    
+    U->>A: "Analisa CV saya"
+    A->>L: Thought: "Butuh data CV, pakai CV Analyzer"
+    A->>T: Action: CV Analyzer Tool(input=CV)
+    T-->>A: Observation: "Skor ATS: 78%, Saran: perbaiki skill section"
+    A->>L: Thought: "Tambahkan saran ke jawaban final"
+    A-->>U: Final Answer: "Skor ATS kamu 78%, perbaiki skill section agar lebih ATS-friendly."
+
 🖥️ Teknologi & Library yang Digunakan
 1. Streamlit
 2. LangChain + LangGraph
