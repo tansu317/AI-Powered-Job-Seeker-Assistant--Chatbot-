@@ -1,5 +1,4 @@
-**💼 AI-Powered Job Seeker Assistant**
-
+****💼 AI-Powered Job Seeker Assistant****
 📌 Project Overview
 AI Job Seeker Assistant adalah aplikasi chatbot interaktif berbasis Streamlit yang dirancang untuk membantu pencari kerja mempersiapkan diri lebih baik.
 Aplikasi ini memanfaatkan LLM (Gemini), RAG (Retrieval Augmented Generation), dan ReAct Agent untuk:
@@ -24,6 +23,7 @@ Aplikasi ini memanfaatkan LLM (Gemini), RAG (Retrieval Augmented Generation), da
 
 
 flowchart TD
+
     A[User Input] -->|CV / JD / Pertanyaan| B[Streamlit UI]
     B --> C{ReAct Agent}
     
